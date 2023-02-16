@@ -1,0 +1,5 @@
+SVO word order
+nouns-adjectives.
+Preposition-noun(phrase)
+Auxiliary verbs-verbs.
+Possessee-Possessor

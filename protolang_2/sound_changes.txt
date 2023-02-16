@@ -1,0 +1,3 @@
+1) ia, io, iu becomes [ja], [jo], [ju],
+ua, ui becomes [wa], [wi]
+2) nk becomes [ŋk]

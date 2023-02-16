@@ -1,2 +1,3 @@
-(C)V(C)
+(C)V(N)
+N=m,n
 Stress is on the second-to-last syllable unless specified.

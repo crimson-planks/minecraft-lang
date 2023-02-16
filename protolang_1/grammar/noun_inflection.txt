@@ -1,0 +1,2 @@
+Nouns are conjugated by number.
+plural: -(n)os
