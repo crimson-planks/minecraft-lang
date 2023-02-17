@@ -1,3 +1,9 @@
-1) ia, io, iu becomes [ja], [jo], [ju],
-ua, ui becomes [wa], [wi]
-2) nk becomes [ŋk]
+1) ia/ja/_
+   io/jo/_
+   iu/ju/_
+   oi/oj/_
+   ui
+(Only when the 'i' is unstressed)
+2) n/ŋ/_k
+3) kh/kx/_i
+4) k//_{p,t,ph,th}
