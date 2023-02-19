@@ -4,6 +4,3 @@
    oi/oj/_
    ui
 (Only when the 'i' is unstressed)
-2) n/ŋ/_k
-3) kh/kx/_i
-4) k//_{p,t,ph,th}
