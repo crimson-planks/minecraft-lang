@@ -1,33 +1,57 @@
 Feature voicing(unvoiced, voiced)
-Feature place(bilabial, dental, alveolar, velar, glottal)
+Feature place(bilabial, dental, alveolar, velar, palatal, glottal, labialvelar)
 Feature manner(nasal, plosive, fricative, trill, approximent)
-Feature +lateral
-Feature +stress
 
-Symbol m [voiced bilabial nasal]
-Symbol n [voiced alveolar nasal]
-Symbol p [unvoiced bilabial plosive]
-Symbol t
-Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l}
-Class monophthong {a,e,i,o,u}
-Class diphthong {ai, au, ei, eu, ia, io, iu, oa, oi, ou, ua, ui}
+Feature +lateral
+Feature +aspirated
+
+Feature height(close, mid, open)
+Feature backness(front, central, back)
+Feature roundedness(unrounded,rounded)
+Feature +stress
+Feature type(consonant,vowel)
+
+
+Symbol m [voiced bilabial nasal consonant]
+Symbol n [voiced alveolar nasal consonant]
+Symbol p [unvoiced bilabial plosive consonant]
+Symbol t [unvoiced alveolar plosive consonant]
+Symbol k [unvoiced velar plosive consonant]
+Symbol pʰ [+aspirated unvoiced bilabial plosive consonant]
+Symbol tʰ [+aspirated unvoiced alveolar plosive consonant]
+Symbol kʰ [+aspirated unvoiced velar plosive consonant]
+Symbol s [unvoiced alveolar fricative consonant]
+Symbol h [unvoiced glottal fricative consonant]
+Symbol r [voiced alveolar trill consonant]
+Symbol l [voiced alveolar +lateral approximent consonant]
+Symbol j [voiced palatal approximent consonant]
+Symbol w [voiced labialvelar approximent consonant]
+
+Symbol a [open front unrounded vowel]
+Symbol e [mid front unrounded vowel]
+Symbol i [close front unrounded vowel]
+Symbol o [mid back rounded vowel]
+Symbol u [close back rounded vowel]
+Symbol ɒ [open back rounded vowel]
+Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l, j, w}
+Class monophthong {a,e,i,o,u, ɒ}
+Class diphthong {ai, au, ei, eu, ia, io, iu, oa, ɒa, oi, ou, ua, ui}
 Class vowel {@monophthong, @diphthong}
-Class nasal {m,n}
 deromanizer:
     ph=>pʰ
     th=>tʰ
     kh=>kʰ
     '=>*
-    ö=>ɑ
+    ö=>ɒ
 Syllables:
-    @consonant? @vowel @nasal?
+    @consonant? @vowel [nasal]?
 u-gliding:
     u=>w/_ @vowel
     u=>w/@vowel _
 i-gliding:
     i=>j/_ @vowel
     i=>j/@vowel _
-o/ɑ/_a
+o/ɒ/_a
 romanizer:
     ph=>p'h
     th=>t'h
@@ -35,4 +59,4 @@ romanizer:
     pʰ=>ph
     tʰ=>th
     kʰ=>kh
-    ɑ=>ö
+    ɒ=>ö
