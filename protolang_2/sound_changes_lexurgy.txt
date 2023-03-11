@@ -1,16 +1,33 @@
-Class vowel {a, e, i, o, u}
+Feature voicing(unvoiced, voiced)
+Feature place(bilabial, dental, alveolar, velar, glottal)
+Feature manner(nasal, plosive, fricative, trill, approximent)
+Feature +lateral
+Feature +stress
+
+Symbol m [voiced bilabial nasal]
+Symbol n [voiced alveolar nasal]
+Symbol p [unvoiced bilabial plosive]
+Symbol t
+Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l}
+Class monophthong {a,e,i,o,u}
+Class diphthong {ai, au, ei, eu, ia, io, iu, oa, oi, ou, ua, ui}
+Class vowel {@monophthong, @diphthong}
+Class nasal {m,n}
 deromanizer:
     ph=>pʰ
     th=>tʰ
     kh=>kʰ
     '=>*
+    ö=>ɑ
+Syllables:
+    @consonant? @vowel @nasal?
 u-gliding:
     u=>w/_ @vowel
     u=>w/@vowel _
 i-gliding:
     i=>j/_ @vowel
     i=>j/@vowel _
-vowel
+o/ɑ/_a
 romanizer:
     ph=>p'h
     th=>t'h
@@ -18,3 +35,4 @@ romanizer:
     pʰ=>ph
     tʰ=>th
     kʰ=>kh
+    ɑ=>ö
