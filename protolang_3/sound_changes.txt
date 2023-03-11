@@ -1,1 +1,5 @@
-{k,kh,kx}/{,,x}/_{p,t,ph,th}
+h/ʔ/V_V
+n/ŋ/_k
+n/m/_{p,m}
+m/n/_{t,n}
+o/ö/_Ca

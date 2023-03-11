@@ -1,0 +1,2 @@
+V={a,ˈa,e,ˈe,i,ˈi,o,ˈo,α,ˈα,u,ˈu}
+C={m,n,p,t,k,ph,th,kh,s,h,r,l}

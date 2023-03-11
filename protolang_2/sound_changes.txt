@@ -1,5 +1,9 @@
-V={aáeéiíoóuú}
+
+
 i/j/_V
 i/j/V_
-n/ŋ/_k
-kh/kx/_i
+u/w/_V
+u/w/V_
+{aeiou}//{ph,th,kh}_h
+h//{ph,th,kh}_
+o/ö/_a

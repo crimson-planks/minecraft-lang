@@ -1,0 +1,3 @@
+phonology: https://docs.google.com/spreadsheets/d/1gKlNDrVA_vSi95mYCn9YW6Y5lOtCDAKtuOVazZJAnLo/edit?usp=sharing
+lexicon: https://docs.google.com/spreadsheets/d/1yijwNxT5FeeIscYxn_vBOgfnWA5MsyiU6PrVaoMl04w/edit?usp=sharing
+grammer: https://docs.google.com/spreadsheets/d/11Duh8ouTH01W0dZ40r-BkFMIcAtU9cyBR3xg9eidUeo/edit?usp=sharing

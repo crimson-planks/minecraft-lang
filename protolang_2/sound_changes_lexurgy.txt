@@ -1,0 +1,20 @@
+Class vowel {a, e, i, o, u}
+deromanizer:
+    ph=>pʰ
+    th=>tʰ
+    kh=>kʰ
+    '=>*
+u-gliding:
+    u=>w/_ @vowel
+    u=>w/@vowel _
+i-gliding:
+    i=>j/_ @vowel
+    i=>j/@vowel _
+vowel
+romanizer:
+    ph=>p'h
+    th=>t'h
+    kh=>k'h
+    pʰ=>ph
+    tʰ=>th
+    kʰ=>kh

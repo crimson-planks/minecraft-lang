@@ -1,3 +1,6 @@
 (C)V(N)
 N=m,n
 Stress is on the second-to-last syllable unless specified.
+Diphthongs and stress:
+    If the word has only 1 syllable AND has a diphthong, the stress is on the first vowel of the diphthong.
+    if the stressed vowel is a diphthong elsewhere, the stress is on the second vowel of the diphthong.
