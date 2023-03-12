@@ -8,9 +8,12 @@ Feature +aspirated
 Feature height(close, mid, open)
 Feature backness(front, central, back)
 Feature roundedness(unrounded,rounded)
-Feature +stress
 Feature type(consonant,vowel)
+Feature (syllable) +stress
+Feature (syllable) +tmpstress
 
+Diacritic ˈ (before) (floating) [+stress]
+Diacritic ⍼ (before) (floating) [+tmpstress]
 
 Symbol m [voiced bilabial nasal consonant]
 Symbol n [voiced alveolar nasal consonant]
@@ -33,10 +36,13 @@ Symbol i [close front unrounded vowel]
 Symbol o [mid back rounded vowel]
 Symbol u [close back rounded vowel]
 Symbol ɒ [open back rounded vowel]
+
+#Symbol ai, au, ei, eu, ia, io, iu, oa, ɒa, oi, ou, ua, ui
+
 Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l, j, w}
-Class monophthong {a,e,i,o,u, ɒ}
+Class monophthong {a,e,i,o,u,ɒ}
 Class diphthong {ai, au, ei, eu, ia, io, iu, oa, ɒa, oi, ou, ua, ui}
-Class vowel {@monophthong, @diphthong}
+Class vowel {@diphthong, @monophthong}
 deromanizer:
     ph=>pʰ
     th=>tʰ
@@ -45,13 +51,22 @@ deromanizer:
     ö=>ɒ
 Syllables:
     @consonant? @vowel [nasal]?
+assign-stress:
+    [+stress] => [-stress +tmpstress]
+    Then: (
+        [+tmpstress] => [+stress -tmpstress]
+        Else: <syl> => [+stress] / _ <syl> $
+        Else: <syl> => [+stress] / _ $
+    )
+Syllables:
+    explicit
 u-gliding:
     u=>w/_ @vowel
     u=>w/@vowel _
 i-gliding:
     i=>j/_ @vowel
     i=>j/@vowel _
-o/ɒ/_a
+oa=>ɒa
 romanizer:
     ph=>p'h
     th=>t'h
