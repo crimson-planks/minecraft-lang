@@ -29,6 +29,7 @@ Symbol r [voiced alveolar trill consonant]
 Symbol l [voiced alveolar +lateral approximent consonant]
 Symbol j [voiced palatal approximent consonant]
 Symbol w [voiced labialvelar approximent consonant]
+Symbol 🄽
 
 Symbol a [open front unrounded vowel]
 Symbol e [mid front unrounded vowel]
@@ -39,7 +40,7 @@ Symbol ɒ [open back rounded vowel]
 
 #Symbol ai, au, ei, eu, ia, io, iu, oa, ɒa, oi, ou, ua, ui
 
-Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l, j, w}
+Class consonant {m, n, p, t, k, pʰ, tʰ, kʰ, s, h, r, l, j, w, 🄽}
 Class monophthong {a,e,i,o,u,ɒ}
 Class diphthong {ai, au, ei, eu, ia, io, iu, oa, ɒa, oi, ou, ua, ui}
 Class vowel {@diphthong, @monophthong}
@@ -49,8 +50,14 @@ deromanizer:
     kh=>kʰ
     '=>*
     ö=>ɒ
+add-tmp-cnsnt:
+    * => 🄽/ $ _ @vowel
 Syllables:
-    @consonant? @vowel [nasal]?
+    @consonant @vowel [nasal]?
+remove-tmp-cnsnt:
+    🄽=>*/$ _
+Syllables:
+    explicit
 assign-stress:
     [+stress] => [-stress +tmpstress]
     Then: (
@@ -58,8 +65,6 @@ assign-stress:
         Else: <syl> => [+stress] / _ <syl> $
         Else: <syl> => [+stress] / _ $
     )
-Syllables:
-    explicit
 u-gliding:
     u=>w/_ @vowel
     u=>w/@vowel _
